@@ -1,0 +1,9 @@
+<h2>New Student</h2>
+
+<form (ngSubmit)="addStudent($event)" *ngIf="newStudent">
+    <input type="text" placeholder="first name" name="firstName" [(ngModel)]="newStudent.firstName" />
+    <input type="text" placeholder="last name" name="lastName" [(ngModel)]="newStudent.lastName" />
+    <input type="number" placeholder="birthday year" name="birthYear" [(ngModel)]="newStudent.birthYear" />
+    <input type="number" placeholder="phone number" name="phoneNumber" [(ngModel)]="newStudent.phoneNumber" />
+    <button type="submit" >Add</button>
+</form>

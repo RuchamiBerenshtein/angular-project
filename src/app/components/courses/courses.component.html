@@ -1,0 +1,19 @@
+<div id="coureses">
+    <h1>Ouer Courses : </h1>
+    <ul>
+        <li *ngFor="let course of courses" [id]="course.code">
+            <button (click)="removeCourse(course)">-</button>
+            <a [routerLink]="'' + course.code"> {{course.name}} </a>
+        </li>
+    </ul>
+    <!-- <app-course *ngIf="selectedCourse" [course]="selectedCourse"></app-course> -->
+</div>
+
+<router-outlet></router-outlet>
+<!-- <div id="students">
+    <h2 (click)="showStudentsClicked()"> <span *ngIf="!showStudents">show</span>
+        <span *ngIf="showStudents">hide</span> students
+    </h2>
+(studentChoosed)="addStudentToCourse($event)"
+    <app-students *ngIf="showStudents" ></app-students>
+</div> -->

@@ -1,0 +1,11 @@
+<h1>students : </h1>
+
+<ul>
+    <li *ngFor="let student of students" > {{student.firstName}} | {{student.lastName}} </li>
+</ul>
+
+
+<!-- <app-new-student *ngIf="addStudent" (studentAdded)="studentAdded($event)"></app-new-student> -->
+<button routerLink="new"> Add Student </button>
+
+<router-outlet></router-outlet>

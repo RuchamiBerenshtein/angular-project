@@ -1,0 +1,19 @@
+<p> {{course?.description}} </p>
+
+<h3>ouer students : </h3>
+
+<ul>
+    <li *ngFor="let student of conectStudents">
+        <button (click)="removeStudent(student)">-</button>
+        {{student.firstName}} | {{student.lastName}}
+    </li>
+</ul>
+
+<br/>
+
+<ul>
+    <li *ngFor="let student of unConectStudents">
+        <button (click)="addStudent(student)">+</button>
+        {{student.firstName}} | {{student.lastName}}
+    </li>
+</ul>
